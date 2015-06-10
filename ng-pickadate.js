@@ -34,6 +34,9 @@
                 date = new Date(0);
                 model.pickADate.assign(scope, date);
               }
+              if (/\d{2}\/\d{2}\/\d{4}/g.test(date)) {
+                  return false;
+              }
               date.setYear(select.obj.getFullYear());
               date.setDate(select.obj.getDate());
               date.setMonth(select.obj.getMonth());
